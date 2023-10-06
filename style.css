@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100%;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card Styles */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-image: linear-gradient(45deg , red , yellow);
+    box-shadow: 0 0 25px #000;
+}
+
+/* Search Bar Styles */
+
+.card .search {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.card .search input {
+    min-width: 200px;
+    min-height: 40px;
+    text-align: center;
+    border-radius: 25px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    box-shadow: inset 0 0 10px lightgray;
+}
+
+.card .search button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 25px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.card .search button:hover {
+    transform: scale(1.025);
+    transition: 0.2s ease-in-out;
+}
+
+.card .search button:not(:hover) {
+    transform: scale(1);
+    transition: 0.2s ease-in-out;
+}
+
+/* Weather Contend Styles */
+
+.weather {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.weather .weather-locality {
+    color: #222;
+}
+
+.weather .weather-icon img {
+    max-width: 150px;
+}
+
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.humidity-and-wind {
+    display: flex;
+    gap: 2rem;
+}
+
+.humidity , .wind {
+    text-align: center;
+}
