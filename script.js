@@ -7,12 +7,12 @@ const weatherIcon = document.querySelector(".weather-icon img");
 
 async function checkWeather(locality){
 
+    const response = await fetch(apiUrl + `&q=${locality}`);
+    var data = await response.json();
+
     if (response.cod == 400) {
         return;
     }
-
-    const response = await fetch(apiUrl + `&q=${locality}`);
-    var data = await response.json();
 
     if (response.status == 404) {
 
