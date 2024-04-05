@@ -10,7 +10,7 @@ async function checkWeather(locality){
     const response = await fetch(apiUrl + `&q=${locality}`);
     var data = await response.json();
 
-    if (response.status == 404 || response.status == 400) {
+    if (response.status == 404 || response.cod == 400) {
 
         document.querySelector(".weather-locality h3").innerHTML = "INVALID LOCALITY NAME!";
         document.querySelector(".temperature h2").innerHTML = "? °C";
